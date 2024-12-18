@@ -1,1 +1,11 @@
-<p>posts works!</p>
+<div>
+    <main>
+        <section *appCustomIf="5000; elseRender placeholder">
+            <h2>This is a section</h2>
+            <p>This is a part of the section, this entire section will be hidden in 5 sec.</p>
+        </section>
+        <ng-template #placeholder>
+            <p>There was a section here.</p>
+        </ng-template>
+    </main>
+</div>
