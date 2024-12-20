@@ -5,9 +5,10 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
 import { counterReducer } from './feature/ngrx-demo/store/counter.reducer';
+import { provideEffects } from '@ngrx/effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideStore({
-    counter: counterReducer
-  })]
+        counter: counterReducer
+    }), provideEffects()]
 };
