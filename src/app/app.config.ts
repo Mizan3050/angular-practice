@@ -10,8 +10,11 @@ import { CounterEffects } from './feature/ngrx-demo/store/counter.effects';
 import { postsReducer } from './feature/posts/store/posts.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideStore({
-    counter: counterReducer,
-    posts: postsReducer
-  }), provideEffects([CounterEffects])]
+  providers: [
+    provideRouter(routes),
+    provideStore({
+      counter: counterReducer,
+      posts: postsReducer
+    }),
+    provideEffects([CounterEffects])]
 };

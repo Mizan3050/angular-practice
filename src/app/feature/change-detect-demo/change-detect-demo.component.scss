@@ -1,0 +1,18 @@
+.node-architecture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .node {
+    width: 200px;
+    height: 80px;
+    border: 1px solid;
+    border-radius: 3px;
+    margin-top: 120px;
+  }
+}
+
+.grand-parent-node {
+  margin-top: 20px !important;
+  display: flex;
+  flex-direction: row;
+}
