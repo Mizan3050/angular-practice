@@ -1,6 +1,8 @@
-<p>{{ detail.name }}</p>
-<p>{{ detail.roll_no }}</p>
-<p>{{ detail.address }}</p>
-<p>{{ detail.position }}</p>
-
-<button (click)="detail.name = 'detail.name'">Update name</button>
+<div *appCustomNgIf="show; orElse placeholder">
+  <p>{{ detail.name }}</p>
+  <p>{{ detail.roll_no }}</p>
+  <p>{{ detail.address }}</p>
+  <p>{{ detail.position }}</p>
+</div>
+<ng-template #placeholder> This is else part </ng-template>
+<button (click)="updateShow()">Update</button>
